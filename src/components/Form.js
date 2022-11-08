@@ -18,20 +18,20 @@ const Form = () => {
     .object({
       firstName: yup
         .string()
-        .required('Введите имя')
+        .required('Пожалуйста, укажите имя')
         .min(2, 'Минимум 2 символа'),
       lastName: yup
         .string()
-        .required('Введите фамилию')
+        .required('Пожалуйста, укажите фамилию')
         .min(2, 'Минимум 2 символа'),
       middleName: yup
         .string()
-        .required('Введите отчество')
+        .required('Пожалуйста, укажите отчество')
         .min(2, 'Минимум 2 символа'),
-      mediaName: yup.string().required('Введите название сми'),
-      mediaLicense: yup.string().required('Введите номер лицензии'),
-      job: yup.string().required('Введите номер лицензии'),
-      email: yup.string().email('Неправильный формат email').required('Введите email'),
+      mediaName: yup.string().required('Пожалуйста, укажите название сми'),
+      mediaLicense: yup.string().required('Пожалуйста, укажите номер лицензии'),
+      job: yup.string().required('Пожалуйста, укажите должность'),
+      email: yup.string().email('Неправильный формат email').required('Пожалуйста, укажите email'),
     })
     .required();
 
