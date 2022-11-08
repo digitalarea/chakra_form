@@ -1,0 +1,9 @@
+{
+    "fisrtName": "Имя",
+    "lastName": "Фамилия",
+    "middleName": "Отчество",
+    "mediaName": "Наименование СМИ",
+    "mediaLicense": "№ свидетельства",
+    "job": "Должность",
+    "email": "Email"
+}

@@ -4,6 +4,7 @@ import { Form } from './components/Form';
 import { Header } from './components/Header';
 import { Wrapper } from './components/Wrapper';
 import { Footer } from './components/Footer';
+import { useTranslation } from 'react-i18next';
 
 function App() {
   const theme = extendTheme({

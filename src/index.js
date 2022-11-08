@@ -1,17 +1,20 @@
 import { ColorModeScript } from '@chakra-ui/react';
-import React, { StrictMode } from 'react';
+import React, { StrictMode, Suspense } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
+import './i18n';
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
 root.render(
   <StrictMode>
-    <ColorModeScript />
-    <App />
+    <Suspense fallback={<div>Loading...</div>}>
+      <ColorModeScript />
+      <App />
+    </Suspense>
   </StrictMode>
 );
 

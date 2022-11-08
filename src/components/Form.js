@@ -12,6 +12,7 @@ import {
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { useTranslation } from 'react-i18next';
 
 const Form = () => {
   const schema = yup
@@ -53,6 +54,8 @@ const Form = () => {
     reset();
   };
 
+  const { t } = useTranslation();
+
   return (
     <Flex align="center" justify="center" flex={1}>
       <Container variant="ite-container">
@@ -62,7 +65,7 @@ const Form = () => {
 
         <form onSubmit={handleSubmit(onSubmit)}>
           <FormControl isInvalid={errors?.firstName} mb={4}>
-            <FormLabel variant="ite-label">Имя</FormLabel>
+            <FormLabel variant="ite-label">{t("fisrtName")}</FormLabel>
             <Input
               type="text"
               size="sm"
@@ -74,7 +77,7 @@ const Form = () => {
           </FormControl>
 
           <FormControl isInvalid={errors?.lastName} mb={4}>
-            <FormLabel variant="ite-label">Фамилия</FormLabel>
+            <FormLabel variant="ite-label">{t("lastName")}</FormLabel>
             <Input
               type="text"
               size="sm"
@@ -86,7 +89,7 @@ const Form = () => {
           </FormControl>
 
           <FormControl isInvalid={errors?.middleName} mb={4}>
-            <FormLabel variant="ite-label">Отчество</FormLabel>
+            <FormLabel variant="ite-label">{t("Middle name")}</FormLabel>
             <Input
               type="text"
               size="sm"
@@ -98,7 +101,7 @@ const Form = () => {
           </FormControl>
 
           <FormControl isInvalid={errors?.mediaName} mb={4}>
-            <FormLabel variant="ite-label">Наименование СМИ</FormLabel>
+            <FormLabel variant="ite-label">{t("mediaName")}</FormLabel>
             <Input
               type="text"
               color="gray.500"
@@ -111,7 +114,7 @@ const Form = () => {
           </FormControl>
 
           <FormControl isInvalid={errors?.mediaLicense} mb={4}>
-            <FormLabel variant="ite-label">№ свидетельства</FormLabel>
+            <FormLabel variant="ite-label">{t("mediaLicense")}</FormLabel>
             <Input
               type="text"
               color="gray.500"
@@ -124,7 +127,7 @@ const Form = () => {
           </FormControl>
 
           <FormControl isInvalid={errors?.job} mb={4}>
-            <FormLabel variant="ite-label">Должность</FormLabel>
+            <FormLabel variant="ite-label">{t("job")}</FormLabel>
             <Input
               type="text"
               color="gray.500"
@@ -137,7 +140,7 @@ const Form = () => {
           </FormControl>
 
           <FormControl isInvalid={errors?.email} mb={4}>
-            <FormLabel variant="ite-label">Email</FormLabel>
+            <FormLabel variant="ite-label">{t("email")}</FormLabel>
             <Input
               type="email"
               color="gray.500"

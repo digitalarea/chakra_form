@@ -1,0 +1,9 @@
+{
+    "fisrtName": "Name",
+    "lastName": "Last name",
+    "middleName": "Middle name",
+    "mediaName": "Name of the media",
+    "mediaLicense": "Media certificate number",
+    "job": "Job title",
+    "email": "Email"
+}
