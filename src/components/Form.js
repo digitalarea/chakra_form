@@ -31,7 +31,10 @@ const Form = () => {
       mediaName: yup.string().required('Пожалуйста, укажите название сми'),
       mediaLicense: yup.string().required('Пожалуйста, укажите номер лицензии'),
       job: yup.string().required('Пожалуйста, укажите должность'),
-      email: yup.string().email('Неправильный формат email').required('Пожалуйста, укажите email'),
+      email: yup
+        .string()
+        .email('Неправильный формат email')
+        .required('Пожалуйста, укажите email'),
     })
     .required();
 
@@ -39,7 +42,7 @@ const Form = () => {
     register,
     handleSubmit,
     reset,
-    formState: { errors, },
+    formState: { errors },
   } = useForm({
     mode: 'onBlur',
     resolver: yupResolver(schema),
@@ -51,7 +54,7 @@ const Form = () => {
   };
 
   return (
-    <Flex minH="100vh" w="full" align="center" justify="center">
+    <Flex align="center" justify="center" flex={1}>
       <Container variant="ite-container">
         <Heading as="h1" variant="ite-heading">
           Аккредитация СМИ
