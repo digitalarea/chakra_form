@@ -89,7 +89,7 @@ const Form = () => {
           </FormControl>
 
           <FormControl isInvalid={errors?.middleName} mb={4}>
-            <FormLabel variant="ite-label">{t("Middle name")}</FormLabel>
+            <FormLabel variant="ite-label">{t("middleName")}</FormLabel>
             <Input
               type="text"
               size="sm"
